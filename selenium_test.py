@@ -8,7 +8,11 @@ options = webdriver.ChromeOptions()
 options.add_experimental_option('detach', True)
 
 #PATH = "C:\ChromeDrivers\ChromeDriver.exe"
-service = Service(executable_path='C:\ChromeDrivers\ChromeDriver.exe')
+
+# For Windows
+# service = Service(executable_path='C:\ChromeDrivers\ChromeDriver.exe')
+# For MacOS
+service = Service(executable_path='./chromedriver')
 
 driver = webdriver.Chrome(service=service, options=options)
 
